@@ -7,8 +7,8 @@ library(ROI.plugin.glpk)
 library(mpo)
 library(zoo)
 
+
 shinyServer(function(input, output){
-  
   output$ef<-renderPlot({
     returns = midcap.ts[, 1:input$number]
     fund<-colnames(returns)
